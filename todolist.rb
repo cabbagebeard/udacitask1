@@ -21,11 +21,58 @@ class TodoList
     	line_break = "=" * 10
 
     	puts @title
+    	puts line_break		#Prints item's number on the list, in English and not array-speak
+
+    	@items.each do |item| 
+    		puts "#{@items.index(item) + 1}. #{item.task}     Completed?: #{item.is_complete?}" 
+    	end
+
     	puts line_break
-    	@items.each { |item| item.print}
-    	puts line_break
-    	puts @items.length
 	end
+
+	def complete(item_number)
+    	selected_item = @items[item_number - 1]
+
+    	@items.each do |item| 
+
+    		if item == selected_item then
+
+    			item.complete
+
+    			delete(item_number)
+
+    		elsif item_number > @items.length
+
+    			puts "That item number does not exist"
+
+    		end
+    	end
+    end
+
+    
+	def delete(item_number)
+    	selected_item = @items[item_number - 1]
+
+    	puts "Would you like to remove item from your list? Y/N"
+
+    	answer = gets.chomp.to_s.upcase!
+
+    	if answer == "Y"
+
+    		@items.delete(selected_item)
+    		puts "Item deleted!"
+
+    	elsif answer == "N"
+
+    		puts "Item not deleted"
+
+    	else 
+
+    		puts "Please put Y or N and try again"   		
+
+    	end
+    end
+
     
 end
 
@@ -38,29 +85,19 @@ class Item
     	@complete = false
     end
 
-    def complete
-    	#NOT CURRENTLY FUNCTIONAL
-    	@complete = true
-    	puts "Would you like to remove item from your list? Y/N"
-    	answer = gets.chomp.to_s.upcase!
+    def task
+    	@task
+    end
 
-    	if answer == "Y"
-    		@items.delete(task)
-    		puts "Item deleted!"
-    	elsif answer == "N"
-    		puts "Item not deleted"
-    	else 
-    		puts "Please put Y or N and try again"   		
-    	end
+    def complete
+    	@complete = true
     end
 
     def is_complete?
     	@complete
     end
+    
 
-    def print
-    	puts "#{@task}   Completed:#{@complete}"
-    end
 
 end
 
