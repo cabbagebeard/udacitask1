@@ -1,0 +1,12 @@
+#########################################
+##########    NEW FEATURES  #############
+#########################################
+
+
+1. delete_all deletes all items on TodoList, by rendering @items array to an empty array.
+
+2. complete_all marks all items complete
+
+3. TodoList.help (self.help) is a handy reference of built-in functions and their brief descriptions
+
+

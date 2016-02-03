@@ -41,8 +41,6 @@ class TodoList
 
     			item.complete
 
-    			delete_item(item_number)
-
     		elsif item_number > @items.length
 
     			puts "That item number does not exist"
@@ -50,12 +48,27 @@ class TodoList
     		end
     	end
     end
+
+    def complete_all
+
+        @items.each do |item|
+
+            item.complete
+
+        end
+    end
     
 	def delete_item(item_number)
 
     	selected_item = @items[item_number - 1]
 
     	@items.delete(selected_item)
+
+    end
+
+    def delete_all
+
+        @items = []
 
     end
 
@@ -67,11 +80,12 @@ class TodoList
         puts "rename:                     Renames the selected TodoList"
         puts "add_item(item_number):      Adds an item to the selected TodoList"
         puts "delete_item(item_number):   Deletes an item from the selected TodoList"
+        puts "delete_all:                 Deletes all items from the selected TodoList"
         puts "list:                       Prints the name and items on the selected TodoList"
         puts "complete(item_number):      Marks an item as completed"
+        puts "complete_all:               Marks all items as completed"
 
     end
-
 
     
 end
