@@ -51,28 +51,12 @@ class TodoList
 
     
 	def delete(item_number)
+
     	selected_item = @items[item_number - 1]
 
-    	puts "Would you like to remove item from your list? Y/N"
+    	@items.delete(selected_item)
 
-    	answer = gets.chomp.to_s.upcase!
-
-    	if answer == "Y"
-
-    		@items.delete(selected_item)
-    		puts "Item deleted!"
-
-    	elsif answer == "N"
-
-    		puts "Item not deleted"
-
-    	else 
-
-    		puts "Please put Y or N and try again"   		
-
-    	end
     end
-
     
 end
 
@@ -97,7 +81,5 @@ class Item
     	@complete
     end
     
-
-
 end
 
