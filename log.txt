@@ -1,0 +1,48 @@
+commit d9d791edc12f1eb9f97805c2c48726580ddec13a
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Feb 2 21:02:55 2016 -0600
+
+    Filled out udacitask.rb's functionality, took away Y/N prompt for deletion to ensure compatibility
+
+commit 5accb32a6b5c632a380666871a71eb17dee5aa04
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Jan 26 20:45:22 2016 -0600
+
+    Fixed .complete and created a new .delete function that runs inside .complete
+
+commit 207eb6b62b095f355c712e96a5218cf32d466387
+Merge: de94985 7de5710
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Mon Jan 25 21:27:45 2016 -0600
+
+    Merge branch 'master' of https://github.com/cabbagebeard/udacitask1
+
+commit de94985616aa2ea30e847f1ae4eee99255e26cb1
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Mon Jan 25 21:22:53 2016 -0600
+
+    Added functionality for adding new items, listing the items, setting the items to complete, and checking whether or not an item is complete
+
+commit 7de571015dfe24d7ea529cb674f63f2d238a4ecc
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Jan 19 20:07:26 2016 -0600
+
+    Delete todolist_starter.rb
+
+commit 3fd845f383291c31339725ec056b5a4778055fd0
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Jan 19 20:07:18 2016 -0600
+
+    Delete udacitask_starter.rb
+
+commit d31576724891174b64daafb49c9a5000740efd50
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Jan 19 20:05:22 2016 -0600
+
+    Dropped the _starter off of todolist and udacitask file names
+
+commit 4424dae670e8998eefee7b671ede0f0345833b66
+Author: Kevin Windisch <kwindisch1992@gmail.com>
+Date:   Tue Jan 19 19:40:20 2016 -0600
+
+    Initial Commit
