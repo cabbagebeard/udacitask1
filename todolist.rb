@@ -14,21 +14,17 @@ class TodoList
     def add_item(new_item)
         item = Item.new(new_item)
         @items.push(item)
-
     end
 
     def list
     	line_break = "=" * 10
-
-    	puts @title
+        puts @title
     	puts line_break		
 
         #Prints item's number on the list, in English and not array-speak
     	@items.each do |item| 
     		puts "#{@items.index(item) + 1}. #{item.task}     Completed?: #{item.is_complete?}" 
-
     	end
-
     	puts line_break
 	end
 
@@ -44,7 +40,6 @@ class TodoList
     		elsif item_number > @items.length
 
     			puts "That item number does not exist"
-
     		end
     	end
     end
@@ -52,28 +47,22 @@ class TodoList
     def complete_all
 
         @items.each do |item|
-
-            item.complete
-
+               item.complete
         end
     end
     
 	def delete_item(item_number)
 
     	selected_item = @items[item_number - 1]
-
     	@items.delete(selected_item)
 
     end
 
     def delete_all
-
         @items = []
-
     end
 
     def self.help
-
         puts "TodoList's Functions:"
         puts " "
         puts "new:                        Creates a new TodoList [new_list = TodoList.new(\"New List\")"
@@ -84,11 +73,8 @@ class TodoList
         puts "list:                       Prints the name and items on the selected TodoList"
         puts "complete(item_number):      Marks an item as completed"
         puts "complete_all:               Marks all items as completed"
-
     end
-
-    
-end
+end 
 
 class Item
 
@@ -109,7 +95,6 @@ class Item
 
     def is_complete?
     	@complete
-    end
-    
+    end    
 end
 

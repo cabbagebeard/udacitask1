@@ -14,14 +14,14 @@ routine.add_item("Remember that toothpaste and orange juice are awful together")
 routine.list
 
 # Delete the first item
-routine.delete(1)
+routine.delete_item(1)
 
 
 # Print the list
 routine.list
 
 # Delete the second item
-routine.delete(2)
+routine.delete_item(2)
 
 
 # Print the list
@@ -39,3 +39,12 @@ routine.rename("Tomorrow")
 
 # Print the list
 routine.list
+
+# Let's check to see what other features there are...
+TodoList.help
+
+# Mark all as complete
+routine.complete_all
+
+# Finally, delete all items on list
+route.delete_all
