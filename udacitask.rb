@@ -46,5 +46,11 @@ TodoList.help
 # Mark all as complete
 routine.complete_all
 
+# Print the list
+routine.list
+
 # Finally, delete all items on list
-route.delete_all
+routine.delete_all
+
+# Print the list
+routine.list
